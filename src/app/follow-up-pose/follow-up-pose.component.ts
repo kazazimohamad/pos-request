@@ -11,14 +11,7 @@ export class FollowUpPoseComponent implements OnInit {
 
   public follwUpPose : followUpPose = new followUpPose();
 
-  city: string;
-
-  selectedCategory: any = null;
-
-  categories: any[] = [{name: 'Accounting', key: 'A'}, {name: 'Marketing', key: 'M'}, {name: 'Production', key: 'P'}, {name: 'Research', key: 'R'}];
-
-
-
+  selectedValue: string = 'val1';
 
 
   constructor(private followUpPoseService: FollowUpPoseService) { }
@@ -27,7 +20,6 @@ export class FollowUpPoseComponent implements OnInit {
 
   ngOnInit(): void {
     this.followUpPoseList = this.followUpPoseService.getfollowUpPose();
-    this.selectedCategory = this.categories[1];
   }
 
 }

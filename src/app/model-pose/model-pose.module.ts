@@ -4,7 +4,7 @@ import { ModelPoseComponent } from './model-pose.component';
 import{ModelPoseRoutingModule} from './model-pose-routing.module';
 import { ModelPoseDetailComponent } from '../components/model-pose-detail/model-pose-detail.component';
 import {CarouselModule} from "primeng/carousel";
-
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 @NgModule({
   declarations: [
