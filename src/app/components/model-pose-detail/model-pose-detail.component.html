@@ -1,0 +1,17 @@
+
+<div class="card">
+    <div *ngFor="let pic of item.imageUrl">
+        <img class="card-img-top" [src]="pic" alt="Card image cap">
+    </div>
+    <div class="card-body d-r t-r">
+      <h6 class="card-title"> <strong class="text-muted">نام برند:</strong> {{item.brand}}</h6>
+      <h6 class="card-text">مدل: {{item.model}} </h6>
+      <h6 class="card-text">نوع:{{item.poseType}}</h6>
+      <h6 class="card-text">قیمت:{{item.Price}}</h6>
+      <h6 class="card-text">وضعیت:{{item.status}}</h6>
+      <h6 class="card-text">تعداد :{{item.count}}</h6>
+     <a href="#" class="btn btn-primary">انتخاب</a>
+    </div>
+  </div>
+
+

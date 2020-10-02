@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/primeng/resources/primeng.min.css";
+/* @import "../node_modules/primeng/resources/themes/saga-blue/theme.css"; */
+/*@import "../node_modules/primeng/resources/themes/saga-green/theme.css";*/
+@import "../node_modules/primeng/resources/themes/nova-light/theme.css";
+@import "../node_modules/primeicons/primeicons.css";
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('assets/fonts/IRANSansWeb.woff') format('woff');  /* All Major Browsers */
+}
+
+body{
+    direction: rtl;
+    font-family: IRANSans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+
+.text-green{
+  color:  rgb(0, 137, 0);
+}
+
+.d-r{
+  direction: rtl;
+}
+.t-r{
+  text-align: right;
+}
+.p-component {
+  font-family: IRANSans, Tahoma;
+}
+span.pi-chevron-right.p-accordion-toggle-icon:before{
+  content: "\e900";
+}
