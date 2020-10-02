@@ -6,7 +6,6 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import {FollowUpPoseComponent} from "./follow-up-pose.component";
 import { ModalModule } from 'ngx-bootstrap/modal';
 
-
 @NgModule({
   declarations: [
     FollowUpPoseComponent
@@ -16,11 +15,13 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     FollowUpPoseRoutingModule,
     AccordionModule,
     ModalModule.forRoot(),
+
   ],
   exports: [
     FollowUpPoseComponent
   ]
 })
+
 export class FollowUpPoseModule { }
 
 
