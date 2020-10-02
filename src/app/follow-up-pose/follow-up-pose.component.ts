@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef  } from '@angular/core';
 import {followUpPose} from '../core/models/follow-up-pose';
 import {FollowUpPoseService} from '../follow-up-pose/follow-up-pose.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-follow-up-pose',
@@ -11,15 +13,32 @@ export class FollowUpPoseComponent implements OnInit {
 
   public follwUpPose : followUpPose = new followUpPose();
 
-  selectedValue: string = 'val1';
+  modalRef: BsModalRef;
+  message: string;
 
-
-  constructor(private followUpPoseService: FollowUpPoseService) { }
+  constructor(
+    private followUpPoseService: FollowUpPoseService,
+    private modalService: BsModalService,
+    private router: Router
+    ) { }
 
   followUpPoseList = [];
 
   ngOnInit(): void {
     this.followUpPoseList = this.followUpPoseService.getfollowUpPose();
+  }
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
+  }
+  confirm(): void {
+    this.message = 'Confirmed!';
+    this.modalRef.hide();
+    this.router.navigate(['model-pose']);
+  }
+
+  decline(): void {
+    this.message = 'Declined!';
+    this.modalRef.hide();
   }
 
 }

@@ -1,42 +1,31 @@
 <section>
   <div class="container">
 
-    <div class="row">
-      <p class="text-muted">صفحه درخواست پایانه فروشگاهی:</p>
+    <div class="col-12">
+      <p class="text-muted  text-center text-md-right">صفحه درخواست پایانه فروشگاهی:</p>
     </div>
-    <div class="row">
-      <h2 class="text-green">دستگاه کارتخوان</h2>
+    <div class="col-12">
+      <h2 class="text-green text-center text-md-right">دستگاه کارتخوان</h2>
       <p class="d-r t-r">{{followUpPoseList[0].description}}</p>
     </div>
-    <div class="row">
-
-      <p-radioButton name="groupname" value="val1" [(ngModel)]="selectedValue"></p-radioButton>
-      <p-radioButton name="groupname" value="val2" [(ngModel)]="selectedValue"></p-radioButton>
-
-
-      <!-- <div class="radio radibtnpose">
-          <label><input type="radio" name="optradio" [value]="0" checked>انفرادی</label>
-      </div>
-      <div class="radio radibtnpose">
-          <label><input type="radio" name="optradio" [value]="1" checked>گروهی</label>
-      </div> -->
-
-
+    <div class="row my-3">
 
       <!-- <h2 *ngIf="type == 1">Admin</h2> -->
     </div>
     <div class="row">
-      <p-accordion dir="rtl" class="accordingpos">
-        <p-accordionTab>
-          <ng-template pTemplate="header" class="accordion-title">
-            <div>
-                <img   class="imgaccarding" src="../../assets/img/PosIcon.png" />
-                <span class="accordion-title">
+    <div class="col-12">
+      <accordion [isAnimated]="true">
+
+        <accordion-group>
+          <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+            <div class="t-r d-r">
+              <img   class="imgaccarding" src="../../assets/img/PosIcon.png" />
+              <span class="accordion-title">
               مدل ودیعه ای
               </span>
             </div>
 
-          </ng-template>
+          </button>
           <p class="d-r t-r small">
             سل جدیدی از دستگاه‌های کارتخوان با ابعاد بسیار کوچک و جیبی است که با استفاده از اپلیکیشن آپ، خدمات
             پرداخت را انجام می‌دهد. این نوع پایانه دارای رسید کاغذی نیست و تاییدیه پرداخت توسط پیامک ارسال
@@ -44,17 +33,19 @@
           <div class="btndiv">
             <button type="button" class="btn btn-outline-success " routerLink='/model-pose'>انتخاب</button>
           </div>
-        </p-accordionTab>
-        <p-accordionTab>
-          <ng-template pTemplate="header">
-            <div>
+        </accordion-group>
+
+        <!-- acord 2 -->
+        <accordion-group>
+          <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+            <div class="t-r d-r">
               <img class="imgaccarding" src="../../assets/img/PosIcon.png" />
               <span class="accordion-title">
             مدل امانی
             </span>
             </div>
 
-          </ng-template>
+          </button>
           <p class="d-r t-r small">
             سل جدیدی از دستگاه‌های کارتخوان با ابعاد بسیار کوچک و جیبی است که با استفاده از اپلیکیشن آپ، خدمات
             پرداخت را انجام می‌دهد. این نوع پایانه دارای رسید کاغذی نیست و تاییدیه پرداخت توسط پیامک ارسال
@@ -62,27 +53,51 @@
           <div class="btndiv">
             <button type="button" class="btn btn-outline-success " routerLink='/model-pose'>انتخاب</button>
           </div>
-        </p-accordionTab>
-        <p-accordionTab>
-          <ng-template pTemplate="header">
-            <div>
+
+        </accordion-group>
+
+
+        <!-- acord 3 -->
+        <accordion-group>
+          <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+            <div class="t-r d-r">
               <img class="imgaccarding" src="../../assets/img/PosIcon.png" />
-                <span class="accordion-title">
-              مدل خرید(ملکی)
-              </span>
+              <span class="accordion-title">
+           مدل خرید(ملکی)
+            </span>
             </div>
 
-          </ng-template>
+          </button>
           <p class="d-r t-r small">
             سل جدیدی از دستگاه‌های کارتخوان با ابعاد بسیار کوچک و جیبی است که با استفاده از اپلیکیشن آپ، خدمات
             پرداخت را انجام می‌دهد. این نوع پایانه دارای رسید کاغذی نیست و تاییدیه پرداخت توسط پیامک ارسال
             می‌شود.</p>
           <div class="btndiv">
             <button type="button" class="btn btn-outline-success leftbtn " routerLink='/model-pose'>نقدی</button>
-            <button type="button" class="btn btn-outline-success " routerLink=''>اقساطی</button>
+            <!--<button type="button" class="btn btn-outline-success " routerLink=''>اقساطی</button>-->
+            <button type="button" class="btn btn-outline-success leftbtn" (click)="openModal(template)">اقساطی</button>
           </div>
-        </p-accordionTab>
-      </p-accordion>
+
+        </accordion-group>
+
+
+      </accordion>
+
+
+
+
+      <ng-template #template>
+        <div class="modal-body text-center">
+          <p>متن بلند مربوط به تایید در این قسمت قرار میگیرد</p>
+          <button type="button" class="btn btn-primary" (click)="confirm()" >بله</button>
+          <button type="button" class="btn btn-default" (click)="decline()" >خیر</button>
+        </div>
+      </ng-template>
+
+
+
+    </div>
+
     </div>
   </div>
 </section>

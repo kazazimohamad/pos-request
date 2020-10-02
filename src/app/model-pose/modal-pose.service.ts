@@ -16,7 +16,7 @@ export class ModalPoseService {
         Price:"100000",
         status:"موجود",
         count:"3",
-        imageUrl:['assets/img/pos1.jpg','assets/img/pos2.jpg','assets/img/pos3.jpg'],
+        imageUrl:['assets/img/pos11.jpg','assets/img/pos22.jpg','assets/img/pos33.jpg'],
       },
       {
         id:'2',
@@ -26,7 +26,7 @@ export class ModalPoseService {
         Price:"200000",
         status:"موجود",
         count:"7",
-        imageUrl:['assets/img/pos1.jpg','assets/img/pos2.jpg','assets/img/pos3.jpg'],
+        imageUrl:['assets/img/pos22.jpg','assets/img/pos11.jpg','assets/img/pos33.jpg'],
       },
       {
         id:'1',
@@ -36,7 +36,7 @@ export class ModalPoseService {
         Price:"700000",
         status:"ناموجود",
         count:"0",
-        imageUrl:['assets/img/pos1.jpg','assets/img/pos2.jpg','assets/img/pos3.jpg'],
+        imageUrl:['assets/img/pos33.jpg','assets/img/pos11.jpg','assets/img/pos22.jpg'],
       }
     ]
     return modelPose;

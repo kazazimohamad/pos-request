@@ -2,24 +2,25 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FollowUpPoseRoutingModule } from './follow-up-pose-routing.module';
-import { FollowUpPoseComponent } from './follow-up-pose.component';
-
-import {AccordionModule} from 'primeng/accordion';
-import {CardModule} from 'primeng/card';
-import {RadioButtonModule} from "primeng/radiobutton";
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import {FollowUpPoseComponent} from "./follow-up-pose.component";
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
   declarations: [
-    FollowUpPoseComponent,
-    //AccordionModule
+    FollowUpPoseComponent
   ],
   imports: [
     CommonModule,
     FollowUpPoseRoutingModule,
     AccordionModule,
-    CardModule,
-    RadioButtonModule
-    ]
+    ModalModule.forRoot(),
+  ],
+  exports: [
+    FollowUpPoseComponent
+  ]
 })
 export class FollowUpPoseModule { }
+
+

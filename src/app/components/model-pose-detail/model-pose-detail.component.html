@@ -1,8 +1,14 @@
 
 <div class="card">
-    <div *ngFor="let pic of item.imageUrl">
+  <carousel>
+    <slide *ngFor="let pic of item.imageUrl">
+      <img [src]="pic" alt="first slide" style="display: block; width: 100%;">
+    </slide>
+  </carousel>
+
+<!--    <div *ngFor="let pic of item.imageUrl">
         <img class="card-img-top" [src]="pic" alt="Card image cap">
-    </div>
+    </div>-->
     <div class="card-body d-r t-r">
       <h6 class="card-title"> <strong class="text-muted">نام برند:</strong> {{item.brand}}</h6>
       <h6 class="card-text">مدل: {{item.model}} </h6>
