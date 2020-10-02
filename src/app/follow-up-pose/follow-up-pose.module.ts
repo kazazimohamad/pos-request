@@ -8,18 +8,18 @@ import {AccordionModule} from 'primeng/accordion';
 import {CardModule} from 'primeng/card';
 import {RadioButtonModule} from "primeng/radiobutton";
 
-
 @NgModule({
   declarations: [
-    FollowUpPoseComponent,
-    //AccordionModule
+    FollowUpPoseComponent
   ],
   imports: [
     CommonModule,
     FollowUpPoseRoutingModule,
-    AccordionModule,
-    CardModule,
-    RadioButtonModule
-    ]
+    AccordionModule
+  ],
+  exports: [
+    FollowUpPoseComponent
+  ]
 })
+
 export class FollowUpPoseModule { }

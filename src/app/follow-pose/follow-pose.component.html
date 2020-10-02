@@ -30,32 +30,37 @@
                                                 placeholder="موبایل">
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn-outline-success ml-3">پیگیری</button>
+                                    <button (ckick)="statuseShow()" type="button" id="bt"
+                                        class="btn btn-outline-success ml-3">پیگیری
+                                    </button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <p class="text-muted d-r t-r">اخرین وضعیت درخواست:</p>
-                </div>
-                <div>
-                    <!-- <div *ngFor="let item of followPoseList" class="box-a-item col-12 col-md-6 col-lg-4">
-                        <div class="row">
+                <div *ngIf="!isShowDivIf">
+                    <div class="row">
+                        <p class="text-muted d-r t-r">اخرین وضعیت درخواست:</p>
+                    </div>
+                    <div>
+                        <!-- <div *ngFor="let item of followPoseList" class="box-a-item col-12 col-md-6 col-lg-4">
+                          <div class="row">
                             {{followPoseList.dateRequest}}
                             {{followPoseList.timeRequest}}
-                        </div>
-                        <div class="row">
+                          </div>
+                          <div class="row">
                             {{followPoseList.statuseRequest}}
+                          </div>
+                        </div> -->
+                        <div class="text-center text-md-left">
+                            <button type="button" class="btn btn-outline-success ml-3" routerLink='/follow-up-pose'>
+                                اطلاع رسانی عدم پیگیری </button>
+                            <button type="button" class="btn btn-outline-success btnHomePage"
+                                routerLink='/follow-pose'>انصراف</button>
                         </div>
-                    </div> -->
-                    <div class="text-center text-md-left">
-                        <button type="button" class="btn btn-outline-success ml-3" routerLink='/follow-up-pose'>
-                            اطلاع رسانی عدم پیگیری </button>
-                        <button type="button" class="btn btn-outline-success btnHomePage"
-                            routerLink='/follow-pose'>انصراف</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>

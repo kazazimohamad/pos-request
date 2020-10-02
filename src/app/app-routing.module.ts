@@ -20,6 +20,14 @@ const routes: Routes = [
     path: 'model-pose',
     loadChildren: () => import('./model-pose/model-pose.module').then(m => m.ModelPoseModule)
   },
+  {
+    path: 'register-group',
+    loadChildren: () => import('./register-group/register-group.module').then(m => m.RegisterGroupModule)
+  },
+  {
+    path: 'register-single',
+    loadChildren: () => import('./register-single/register-single.module').then(m => m.RegisterSingleModule)
+  },
 
 ];
 

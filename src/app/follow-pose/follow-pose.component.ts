@@ -9,15 +9,18 @@ import { FollowPoseService } from './follow-pose.service';
 })
 export class FollowPoseComponent implements OnInit {
   public follwPose: followPose = new followPose();
-
-
+  isShowDivIf = false;
+  
   constructor(private followPoseService: FollowPoseService) { }
 
   followPoseList = [];
 
-  ngOnInit(): void {
+  ngOnInit( ): void {
     this.followPoseList = this.followPoseService.getfollowPose();
-
+    this.isShowDivIf =true;
+  }
+  statuseShow(){
+    this.isShowDivIf = this.isShowDivIf? false : true;
   }
 
 }

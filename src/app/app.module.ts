@@ -13,6 +13,8 @@ import {AccordionModule} from 'primeng/accordion';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import { ModelPoseComponent } from './model-pose/model-pose.component';
 import {CarouselModule} from 'primeng/carousel';
+import { RegisterSingleComponent } from './register-single/register-single.component';
+import { RegisterGroupComponent } from './register-group/register-group.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import {CarouselModule} from 'primeng/carousel';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
+    RegisterSingleComponent,
+    RegisterGroupComponent,
   ],
   imports: [
     BrowserModule,
