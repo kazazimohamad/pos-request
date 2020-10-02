@@ -1,0 +1,61 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted d-r t-r">صفحه پیگیری درخواست پایانه فروشگاهی:</p>
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <div class="card rounded-0">
+                            <div class="card-header">
+                                <h3 class="mb-0 titleheader">
+                                    پیگیری درخواست
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <form class="form">
+                                    <div class=" row form-group">
+                                        <div class="col-md-2">
+                                            <label>کدملی</label>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" id="meliCode" placeholder="کد ملی ">
+                                        </div>
+                                    </div>
+                                    <div class=" row form-group">
+                                        <div class="col-md-2">
+                                            <label>موبایل</label>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input type="tel" class="form-control" id="phoneNumber"
+                                                placeholder="موبایل">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-success ml-3">پیگیری</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="text-muted d-r t-r">اخرین وضعیت درخواست:</p>
+                </div>
+                <div>
+                    <!-- <div *ngFor="let item of followPoseList" class="box-a-item col-12 col-md-6 col-lg-4">
+                        <div class="row">
+                            {{followPoseList.dateRequest}}
+                            {{followPoseList.timeRequest}}
+                        </div>
+                        <div class="row">
+                            {{followPoseList.statuseRequest}}
+                        </div>
+                    </div> -->
+                    <div class="text-center text-md-left">
+                        <button type="button" class="btn btn-outline-success ml-3" routerLink='/follow-up-pose'>
+                            اطلاع رسانی عدم پیگیری </button>
+                        <button type="button" class="btn btn-outline-success btnHomePage"
+                            routerLink='/follow-pose'>انصراف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
