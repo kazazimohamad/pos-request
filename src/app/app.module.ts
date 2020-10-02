@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import{ BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {FormsModule,  ReactiveFormsModule} from '@angular/forms';
 
@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterSingleComponent } from './register-single/register-single.component';
 import { RegisterGroupComponent } from './register-group/register-group.component';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 
 
@@ -19,8 +20,8 @@ import { RegisterGroupComponent } from './register-group/register-group.componen
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    RegisterSingleComponent,
-    RegisterGroupComponent,
+    // RegisterSingleComponent,
+    // RegisterGroupComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +29,7 @@ import { RegisterGroupComponent } from './register-group/register-group.componen
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-
+    ButtonsModule.forRoot(),
   ],
   exports: [
 

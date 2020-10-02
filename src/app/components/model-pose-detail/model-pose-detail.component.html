@@ -16,7 +16,7 @@
       <h6 class="card-text">قیمت:{{item.Price}}</h6>
       <h6 class="card-text">وضعیت:{{item.status}}</h6>
       <h6 class="card-text">تعداد :{{item.count}}</h6>
-     <a href="#" class="btn btn-primary">انتخاب</a>
+     <button class="btn btn-primary" (click)="gotoNextStep(item.id)">انتخاب</button>
     </div>
   </div>
 
