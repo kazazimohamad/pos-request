@@ -80,16 +80,22 @@
                                                 <option value="3">دماوند</option>
                                               </select>
                                         </div>
-                                    </div>                                    
-                                    <button type="button"
-                                        class="btn btn-outline-success ml-3">ثبت درخواست
-                                    </button>
+                                    </div>     
+                                    <button type="button" class="btn btn-outline-success leftbtn" (click)="openModal(template)">ثبت درخواست</button>                                                                          
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>                
             </div>
+
+            <ng-template #template>
+                <div class="modal-body text-center">
+                  <p>ثبت درخواست شما با موفقیت انجام شد، حداکثر طی 3روز کاری آینده به منظور دعوت و تکمیل اطلاعات با شما تماس حاصل خواهد شد. در صورت عدم برقراری ارتباط ضمن مراجعه مجدد به همین سامانه موضوع عدم تماس همکاران صندوق را اطلاع رسانی نمایید تا در اسرع وقت رسیدگی شود.</p>
+                  <button type="button" class="btn btn-primary" (click)="confirm()" >تایید</button>
+                   </div>
+              </ng-template>
+
         </div>
     </div>
 </section>
